@@ -1,0 +1,22 @@
+1474944141669	Delete element
+1474944630279	Rename type 'Preson'
+1475125618912	Extract method 'equal'
+1475125728196	Extract method 'equalIgnoreCase'
+1475126798635	Extract method 'welcomeLogin'
+1475131198836	Extract method 'javafile'
+1475133544814	Extract method 'tt'
+1475136151987	Extract method 'ai'
+1475136339638	Extract method 'test'
+1475137866895	Extract method 'test1'
+1475139037247	Extract method 'test1'
+1475139286874	Extract method 'test2'
+1475139798925	Extract method 'test3'
+1475141793133	Extract method 'test4'
+1475142206363	Extract method 'test5'
+1475197920717	Extract method 'test6'
+1475203668857	Delete element
+1475203720236	Copy package
+1475203728378	Delete element
+1475219163481	Delete element
+1475219199529	Move compilation unit
+1475219445390	Move compilation unit

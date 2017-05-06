@@ -1,0 +1,39 @@
+package com.it.test;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class Server {
+	public static void main(String[] args) throws IOException {
+		ServerSocket server = new ServerSocket(8888);
+		System.out.println("我是服务端");
+		Socket severSocket = server.accept();
+
+		while (true) {
+			Scanner sc=new Scanner(System.in);
+			String str=sc.nextLine();
+			if (str.equals(0)) {
+				break;
+			}
+			OutputStream os = severSocket.getOutputStream();
+			PrintStream ps = new PrintStream(os);
+			ps.println(str);
+
+			InputStream is = severSocket.getInputStream();
+			InputStreamReader isr = new InputStreamReader(is);
+			BufferedReader br = new BufferedReader(isr);
+			System.out.println(br.readLine());
+
+		}
+		server.close();
+		
+		
+	}
+}

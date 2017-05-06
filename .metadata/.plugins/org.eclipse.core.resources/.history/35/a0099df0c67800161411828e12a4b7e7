@@ -1,0 +1,80 @@
+package com.training;
+
+public class While {
+	public static void main(String[] args) {
+		// 1-100的奇数偶数和
+		int a = 0;
+		int sum1 = 0;
+		int sum2 = 0;
+		while (a <= 100) {
+			if (a % 2 == 0) {
+				sum1 += a;
+			}
+			if (a % 2 != 0) {
+				sum2 += a;
+			}
+			a++;
+		}
+		System.out.println("100以内偶数的和为" + sum1);
+		System.out.println("100以内奇数的和为" + sum2);// 结束
+
+		// 1~10的阶乘
+		int b = 1;
+		int n = 1;
+		while (b <= 10) {
+			n *= b;
+			System.out.println(b + "!=" + n);
+			b++;
+		} // 结束
+
+		// 1!+2!+3!+4!+5!=?
+		int sum = 0;
+		int num = 1;
+		int c = 1;
+		while (c <= 5) {
+			num *= c;
+			sum += num;
+			c++;
+		}
+		System.out.println("1!+2!+3!+4!+5!=" + sum);// 结束
+
+		// 九九乘法表 for语句
+		for (int i = 1; i <= 9; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(j + "*" + i + "=" + j * i + "\t");
+			}
+			System.out.println();
+		} // 结束
+
+		// 九九乘法表while语句
+		int k = 1;
+		while (k <= 9) {
+			int l = 1;
+			while (l <= k) {
+				System.out.print(l + "*" + k + "=" + l * k + "\t");
+				l++;
+			}
+			k++;
+			System.out.println();
+		} // 结束
+
+		// 1~100以内的素数
+		int e = 1;
+		while (e <= 100) {
+			int f = 2;
+			while (f <= e) {
+				if (e % f == 0) {
+					if (e != f) {
+						break;
+					}
+					if (e == f) {
+						System.out.print(e+"\t");
+					}
+				}
+				f++;
+			}
+			e++;
+		}
+
+	}
+}

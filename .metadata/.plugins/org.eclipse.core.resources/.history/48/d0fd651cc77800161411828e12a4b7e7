@@ -1,0 +1,48 @@
+package com.training;
+
+public class Work2 {
+	public static void main(String[] args) {
+		// 0-100以内的奇数和
+		int sum1 = 0;
+		int sum2 = 0;
+		for (int a = 0; a <= 100; a++) {
+			if (a % 2 == 0) {
+				sum1 += a;
+			} else {
+				sum2 += a;
+			}
+		}
+		System.out.println("100以内偶数的和为" + sum1);
+		System.out.println("100以内奇数的和为" + sum2);// 结束
+
+		// 1~10的阶乘=?
+		int n = 1;
+		for (int i = 1; i <= 10; i++) {
+			n *= i;
+			System.out.println(i + "!=" + n + "\t");
+		}
+		// 结束
+
+		// 1~100以内的素数
+		int count = 0;
+		for (int x = 1; x <= 100; x++) {
+			for (int y = 2; y <= x; y++) {
+				if (x % y == 0) {
+					if (x != y) {
+						break;
+					}
+					if (x == y) {
+						System.out.print(x + "\t");
+						count++;
+					}
+					if (count % 5 == 0) {
+						System.out.println();
+					}
+				}
+			}
+		}
+		// 结束
+
+	}
+
+}

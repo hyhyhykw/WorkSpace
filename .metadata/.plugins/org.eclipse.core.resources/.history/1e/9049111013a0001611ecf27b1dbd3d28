@@ -1,0 +1,30 @@
+package com.it.test;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+	public static void main(String[] args) throws IOException {
+		ServerSocket server = new ServerSocket(8888);
+		System.out.println("我是服务端");
+		Socket severSocket = server.accept();
+		severSocket.shutdownInput();
+
+		OutputStream os = severSocket.getOutputStream();
+		os.write("老何，下午吃啥！".getBytes());
+
+		InputStream is = severSocket.getInputStream();
+		byte[] bs = new byte[1024];
+		int len = 0;
+		while ((len = is.read(bs)) != -1) {
+			System.out.println(new String(bs, 0, len));
+		}
+		os.close();
+		// is.close();
+
+		server.close();
+	}
+}
